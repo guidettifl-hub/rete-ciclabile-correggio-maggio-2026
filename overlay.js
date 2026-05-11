@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     add("titolo-webmap", `
-        <div class="titolo-riga1">Rete ciclabile di Correggio (Reggio Emilia)</div>
+        <div class="titolo-riga1">
+  <a href="schede/GitHub.pdf" target="_blank">
+    Rete ciclabile di Correggio (Reggio Emilia)
+  </a>
+</div>
         <div class="titolo-riga2">Aggiornamento: aprile 2026</div>
     `);
 
