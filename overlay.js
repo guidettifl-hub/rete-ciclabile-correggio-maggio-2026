@@ -22,10 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
 `);
 
 add("box-info", `
-    <a href="schede/GitHub.pdf" target="_blank">
-        CLICCA QUI
-    </a>
-    per aprire la LEGENDA della mappa oppure su una ICONA della mappa per aprire una scheda descrittiva
+    <div class="box-link">
+        <a href="schede/GitHub.pdf" target="_blank">
+            CLICCA QUI
+        </a>
+    </div>
+
+    <div class="box-testo">
+        per aprire la LEGENDA della mappa oppure su una ICONA della mappa per aprire una scheda descrittiva
+    </div>
 `);
 
     add("firma-fissa", `
