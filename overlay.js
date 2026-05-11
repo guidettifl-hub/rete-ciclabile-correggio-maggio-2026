@@ -10,17 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     add("titolo-webmap", `
-        <div class="titolo-riga1">
-  <a href="schede/GitHub.pdf" target="_blank">
-    Rete ciclabile di Correggio (Reggio Emilia)
-  </a>
-</div>
-        <div class="titolo-riga2">Aggiornamento: aprile 2026</div>
-    `);
+    <div class="titolo-riga1">
+        <a href="schede/GitHub.pdf" target="_blank">
+            Rete ciclabile di Correggio (Reggio Emilia)
+        </a>
+    </div>
 
-    add("box-info", `
-        Clicca su un tratto o su un punto della rete per aprire la relativa scheda PDF
-    `);
+    <div class="titolo-riga2">
+        Aggiornamento: maggio 2026
+    </div>
+`);
+
+add("box-info", `
+    <a href="schede/GitHub.pdf" target="_blank">
+        CLICCA QUI
+    </a>
+    per aprire la LEGENDA della mappa oppure su una ICONA della mappa per aprire una scheda descrittiva
+`);
 
     add("firma-fissa", `
         © Ing. Flavio Guidetti
