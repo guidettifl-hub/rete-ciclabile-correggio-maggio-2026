@@ -31,8 +31,7 @@ add("box-info", `
 
     <div class="box-testo"
      style="color:white; text-align:center; font-size:15px; line-height:1.25;">
-    per aprire la LEGENDA della mappa<br>
-    oppure<br>
+    per aprire la LEGENDA oppure<br>
     CLICCA su una ICONA della<br>
     mappa per aprire una scheda descrittiva
 </div>
