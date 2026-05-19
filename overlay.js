@@ -29,7 +29,7 @@ add("box-info", `
     </div>
 
     <div class="box-testo" style="color:white;">
-        per aprire la LEGENDA della mappa oppure su una ICONA della mappa per aprire una scheda descrittiva
+        per aprire la LEGENDA della mappa oppure CLICCA su una ICONA della mappa per aprire una scheda descrittiva
     </div>
 `);
 
