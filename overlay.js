@@ -23,16 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 add("box-info", `
     <div class="box-link">
-        <a href="schede/GitHub.pdf" target="_blank">
+        <a href="schede/GitHub.pdf" target="_blank"
+           style="font-size:20px; font-weight:bold;">
             CLICCA QUI
         </a>
     </div>
 
-    <div class="box-testo" style="color:white;">
+    <div class="box-testo"
+         style="color:white; text-align:center;">
         per aprire la LEGENDA della mappa oppure CLICCA su una ICONA della mappa per aprire una scheda descrittiva
     </div>
 `);
-
     add("firma-fissa", `
         © Ing. Flavio Guidetti
     `);
