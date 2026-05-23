@@ -133,6 +133,19 @@
             zoomControl:false, maxZoom:28, minZoom:1
         }).fitBounds([[44.75660072614984,10.746754990707464],[44.787372392260025,10.827541179677038]]);
         var hash = new L.Hash(map);
+		map.on('click', function(e) {
+    var lat = e.latlng.lat.toFixed(6);
+    var lon = e.latlng.lng.toFixed(6);
+
+    var streetViewUrl = 'https://www.google.com/maps?q=' + lat + ',' + lon + '&layer=c';
+
+    L.popup()
+        .setLatLng(e.latlng)
+        .setContent(
+            '<a href="' + streetViewUrl + '" target="_blank">Apri Street View qui</a>'
+        )
+        .openOn(map);
+});	
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
 // Crea link Google Street View partendo dalla geometria del tratto cliccato
