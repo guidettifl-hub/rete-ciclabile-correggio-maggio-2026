@@ -91,7 +91,7 @@
     color: #1a5fb4;
     text-decoration: underline;
     font-weight: bold;
-	font-size 14px;
+	font-size: 14px;
 }
 
 .box-link {
@@ -135,6 +135,36 @@
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+// Crea link Google Street View partendo dalla geometria del tratto cliccato
+function streetViewUrlFromFeature(feature) {
+    var coords = feature.geometry && feature.geometry.coordinates;
+    var lon = null;
+    var lat = null;
+
+    if (!coords) {
+        return null;
+    }
+
+    if (feature.geometry.type === 'LineString' && coords.length > 0) {
+        var mid = coords[Math.floor(coords.length / 2)];
+        lon = mid[0];
+        lat = mid[1];
+    } else if (feature.geometry.type === 'MultiLineString' && coords.length > 0 && coords[0].length > 0) {
+        var line = coords[0];
+        var mid2 = line[Math.floor(line.length / 2)];
+        lon = mid2[0];
+        lat = mid2[1];
+    } else if (feature.geometry.type === 'Point') {
+        lon = coords[0];
+        lat = coords[1];
+    }
+
+    if (lon === null || lat === null) {
+        return null;
+    }
+
+    return 'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + lon;
+}
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
          var tempDiv = document.createElement('div');
@@ -228,6 +258,16 @@
         });
         layer_EsriSatellite_1;
         map.addLayer(layer_EsriSatellite_1);
+
+        var baseMaps = {
+            "OSM - nomi vie": layer_OSMStandard_0,
+            "Satellite": layer_EsriSatellite_1
+        };
+
+        L.control.layers(baseMaps, null, {
+            collapsed: false,
+            position: 'topright'
+        }).addTo(map);
         function pop_LN_rete_ciclabile_Correggio_agg2026_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -244,6 +284,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['lunghezza_auto'] !== null ? autolinker.link(String(feature.properties['lunghezza_auto']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (streetViewUrlFromFeature(feature) !== null ? '<a href="' + streetViewUrlFromFeature(feature) + '" target="_blank">Apri Street View</a>' : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
