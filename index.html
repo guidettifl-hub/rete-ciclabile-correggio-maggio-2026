@@ -137,7 +137,7 @@
     var lat = e.latlng.lat.toFixed(6);
     var lon = e.latlng.lng.toFixed(6);
 
-    var streetViewUrl = 'https://www.google.com/maps?q=' + lat + ',' + lon + '&layer=c';
+    var streetViewUrl = 'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=' + lat + ',' + lon;
 
     L.popup()
         .setLatLng(e.latlng)
