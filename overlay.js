@@ -37,7 +37,7 @@ add("box-info", `
 </div>
 `);
     add("firma-fissa", `
-        © Ing. Flavio Guidetti
+        © Struttura GIS e WebMap sviluppate da Ing. Flavio Guidetti anno 2026
     `);
 
 });
