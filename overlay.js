@@ -25,15 +25,15 @@ add("box-info", `
     <div class="box-link">
         <a href="schede/GitHub.pdf" target="_blank"
            style="font-size:20px; font-weight:bold;">
-            CLICCA QUI
+            CLIC QUI
         </a>
     </div>
 
     <div class="box-testo"
      style="color:white; text-align:center; font-size:15px; line-height:1.25;">
     per aprire la LEGENDA<br>
-    CLICCA su una ICONA della MAPPA per aprire una scheda descrittiva<br>
-    CLICCA su una STRADA per aprire Street View
+    CLIC su una ICONA per aprire la scheda descrittiva<br>
+    CLIC su una STRADA per aprire Street View
 </div>
 `);
     add("firma-fissa", `
