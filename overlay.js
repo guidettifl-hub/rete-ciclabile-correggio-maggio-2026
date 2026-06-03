@@ -32,8 +32,8 @@ add("box-info", `
     <div class="box-testo"
      style="color:white; text-align:center; font-size:15px; line-height:1.25;">
     per aprire la LEGENDA<br>
-    CLICCA su una ICONA della MAPPA per aprire<br>
-    una scheda descrittiva CLICCA su una STRADA per aprire Street View
+    CLICCA su una ICONA della MAPPA per aprire una scheda descrittiva<br>
+    CLICCA su una STRADA per aprire Street View
 </div>
 `);
     add("firma-fissa", `
