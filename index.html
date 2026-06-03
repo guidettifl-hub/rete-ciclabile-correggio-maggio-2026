@@ -128,6 +128,7 @@
         <script src="data/MS_ManutenzioneStraordinaria_7.js"></script>
         <script src="data/MO_ManutenzioneOrdinaria_8.js"></script>
         <script src="data/CS_centro_storico_9.js"></script>
+		<script src="data/Confini_Comunali_0.js"></script>
         <script src="data/BA_BarriereArchitettoniche_10.js"></script>
         <script>
         var map = L.map('map', {
@@ -893,7 +894,24 @@ function streetViewUrlFromFeature(feature) {
         });
         bounds_group.addLayer(layer_BA_BarriereArchitettoniche_10);
         map.addLayer(layer_BA_BarriereArchitettoniche_10);
-        setBounds();
+        function style_Confini_Comunali_0_0() {
+    return {
+        color: 'rgba(0,0,255,1.0)',
+        weight: 3,
+        opacity: 1,
+        fillOpacity: 0,
+        interactive: false
+    };
+}
+
+var layer_Confini_Comunali_0 = new L.geoJson(json_Confini_Comunali_0, {
+    attribution: '',
+    interactive: false,
+    style: style_Confini_Comunali_0_0
+});
+
+map.addLayer(layer_Confini_Comunali_0);
+		setBounds();
         </script>        
     <script src="overlay.js"></script>
 	</body>
