@@ -30,7 +30,7 @@ add("box-info", `
     </div>
 
     <div class="box-testo"
-     style="color:white; text-align:center; font-size:15px; line-height:1.25;">
+     style="color:#00BFFF; text-align:center; font-size:15px; line-height:1.25;">
     per aprire la LEGENDA<br>
     CLIC su una ICONA per aprire la scheda descrittiva<br>
     CLIC su una STRADA per aprire Street View
