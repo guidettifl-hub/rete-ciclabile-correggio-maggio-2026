@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <div class="titolo-riga2">
-        Aggiornamento: maggio 2026
+        Aggiornamento: Giugno 2026
     </div>
 `);
 
