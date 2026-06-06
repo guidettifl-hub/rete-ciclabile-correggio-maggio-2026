@@ -123,8 +123,8 @@
         <script src="data/LN_rete_ciclabile_Correggio_agg2026_2.js"></script>
         <script src="data/ZR_zona_residenziale_3.js"></script>
         <script src="data/RP_RegolediProgetto_4.js"></script>
-        <script src="data/NS_NuovaSegnaletica_5.js"></script>
-        <script src="data/NP_NuoviProgetti_6.js"></script>
+        <script src="data/NS_NuovaSegnaletica_0.js"></script>
+        <script src="data/NP_NuoviProgetti_0.js"></script>
         <script src="data/MS_ManutenzioneStraordinaria_7.js"></script>
         <script src="data/MO_ManutenzioneOrdinaria_8.js"></script>
         <script src="data/CS_centro_storico_9.js"></script>
@@ -558,7 +558,7 @@ function streetViewUrlFromFeature(feature) {
         });
         bounds_group.addLayer(layer_RP_RegolediProgetto_4);
         map.addLayer(layer_RP_RegolediProgetto_4);
-        function pop_NS_NuovaSegnaletica_5(feature, layer) {
+        function pop_NS_NuovaSegnaletica_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -586,22 +586,22 @@ function streetViewUrlFromFeature(feature) {
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_NS_NuovaSegnaletica_5_0() {
+        function style_NS_NuovaSegnaletica_0_0() {
             return {
-                pane: 'pane_NS_NuovaSegnaletica_5',
+                pane: 'pane_NS_NuovaSegnaletica_0',
                 interactive: true,
             }
         }
-        map.createPane('pane_NS_NuovaSegnaletica_5');
-        map.getPane('pane_NS_NuovaSegnaletica_5').style.zIndex = 405;
-        map.getPane('pane_NS_NuovaSegnaletica_5').style['mix-blend-mode'] = 'normal';
-        var layer_NS_NuovaSegnaletica_5 = new L.geoJson(json_NS_NuovaSegnaletica_5, {
+        map.createPane('pane_NS_NuovaSegnaletica_0');
+        map.getPane('pane_NS_NuovaSegnaletica_0').style.zIndex = 405;
+        map.getPane('pane_NS_NuovaSegnaletica_0').style['mix-blend-mode'] = 'normal';
+        var layer_NS_NuovaSegnaletica_0 = new L.geoJson(json_NS_NuovaSegnaletica_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_NS_NuovaSegnaletica_5',
-            layerName: 'layer_NS_NuovaSegnaletica_5',
-            pane: 'pane_NS_NuovaSegnaletica_5',
-            onEachFeature: pop_NS_NuovaSegnaletica_5,
+            dataVar: 'json_NS_NuovaSegnaletica_0',
+            layerName: 'layer_NS_NuovaSegnaletica_0',
+            pane: 'pane_NS_NuovaSegnaletica_0',
+            onEachFeature: pop_NS_NuovaSegnaletica_0,
             pointToLayer: function (feature, latlng) {
                return L.marker(latlng, {
         icon: L.icon({
@@ -612,9 +612,9 @@ function streetViewUrlFromFeature(feature) {
     });
             },
         });
-        bounds_group.addLayer(layer_NS_NuovaSegnaletica_5);
-        map.addLayer(layer_NS_NuovaSegnaletica_5);
-        function pop_NP_NuoviProgetti_6(feature, layer) {
+        bounds_group.addLayer(layer_NS_NuovaSegnaletica_0);
+        map.addLayer(layer_NS_NuovaSegnaletica_0);
+        function pop_NP_NuoviProgetti_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -642,22 +642,22 @@ function streetViewUrlFromFeature(feature) {
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_NP_NuoviProgetti_6_0() {
+        function style_NP_NuoviProgetti_0_0() {
             return {
-                pane: 'pane_NP_NuoviProgetti_6',
+                pane: 'pane_NP_NuoviProgetti_0',
                 interactive: true,
             }
         }
-        map.createPane('pane_NP_NuoviProgetti_6');
-        map.getPane('pane_NP_NuoviProgetti_6').style.zIndex = 406;
-        map.getPane('pane_NP_NuoviProgetti_6').style['mix-blend-mode'] = 'normal';
-        var layer_NP_NuoviProgetti_6 = new L.geoJson(json_NP_NuoviProgetti_6, {
+        map.createPane('pane_NP_NuoviProgetti_0');
+        map.getPane('pane_NP_NuoviProgetti_0').style.zIndex = 406;
+        map.getPane('pane_NP_NuoviProgetti_0').style['mix-blend-mode'] = 'normal';
+        var layer_NP_NuoviProgetti_0 = new L.geoJson(json_NP_NuoviProgetti_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_NP_NuoviProgetti_6',
-            layerName: 'layer_NP_NuoviProgetti_6',
-            pane: 'pane_NP_NuoviProgetti_6',
-            onEachFeature: pop_NP_NuoviProgetti_6,
+            dataVar: 'json_NP_NuoviProgetti_0',
+            layerName: 'layer_NP_NuoviProgetti_0',
+            pane: 'pane_NP_NuoviProgetti_0',
+            onEachFeature: pop_NP_NuoviProgetti_0,
             pointToLayer: function (feature, latlng) {
                return L.marker(latlng, {
         icon: L.icon({
@@ -668,8 +668,8 @@ function streetViewUrlFromFeature(feature) {
     });
             },
         });
-        bounds_group.addLayer(layer_NP_NuoviProgetti_6);
-        map.addLayer(layer_NP_NuoviProgetti_6);
+        bounds_group.addLayer(layer_NP_NuoviProgetti_0);
+        map.addLayer(layer_NP_NuoviProgetti_0);
         function pop_MS_ManutenzioneStraordinaria_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
